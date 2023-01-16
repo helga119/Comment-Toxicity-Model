@@ -43,7 +43,12 @@ prediction labels image
 
 4. 
  Evaluate Model
- 
+These are the metrics caluculated below are calculated, the had only trained for a single epoch but proven by the loss  still continuously decreasing so it could possibly improve by raising the number of epochs and training a little bit longer to improve the results partcularly on my accuracy in this case.
+
+5.Gradio and testing
+and you can see it is determining whether or not our model or whether or not that particular statement gets flagged or not and i had tested it would 2 opposing comments to detect its performace towrads them, and it seemed to work nicely, though i do believe the performance of this model could be imporoved on furter if a higher epoch should be imposed. 
+
+'i freaking hate you' image 
 
 
-
+'i love you' image
