@@ -20,7 +20,7 @@ what is Sequential neural network?
 ..... ?
 
 
-A Sequential model is appropriate for a plain stack of layers where each layer has exactly one input tensor and one output tensor, i used keras to import the seqe api since it would be the fastest asnd easist to create my model and imported a number of layers:
+A Sequential model is appropriate for a plain stack of layers where each layer has exactly one input tensor and one output tensor, i used keras to import the seqe api since it would be the fastest asnd easist to create my model and imported a number keras layers:
 lstm(with 32 lstm units, with an activation of 'tanh')
 dropout 
 bidirectional 
