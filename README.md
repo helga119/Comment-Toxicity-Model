@@ -8,32 +8,33 @@ i was inspired to create this model because of the kaggle competition for toxic 
     
 1.
 -Data collection and Data preprocessing
-i had collected the data from the kaggle competition '  '  and from then the data will have to go throug pre-processing in order for it to get it ready for modeling, and this involved a few critical steps.
+i had collected the data from the kaggle competition page and from then the data will have to go throug pre-processing in order for it to get it ready for modeling, and this involved a few critical steps.
 
-The approach i took was to feed the comments into the LSTM as part of the neural network but of course i had to perform tokenization. Firstly  i had used the text vectorization layer, which comes in handy when doing nlp, because it makes tokenization a lot simpler, the steps are shown below.
+The approach i took was to feed the comments into the LSTM as part of the neural network but of course i had to perform tokenization. Firstly  i had used the text vectorization layer, which comes in handy when doing nlp, because it makes tokenization a lot simpler.
 
-inside of my dictionary so of my text vectorization layer i had specified specify how many words i wanted to store inside of that vocab, understandably the more words that you store the larger you're going to have or the bigger your model is effectively going to be because if you've got massive word embeddings, then you're going to need one word embedding for every single word, with that said i've specified it to 200 000 which may sound like a lot, however i didnt want to risk not creating an accurate model.
+inside of my dictionary so of my text vectorization layer i had specified how many words i wanted to store inside of that vocab, understandably the more words that i store the larger my model will effectively be because if i've got massive word embeddings, then i'm going to need one word embedding for every single word, with that said i've specified it to 200 000 because i didnt want to risk out on its accuarcy.
 
 
 2. Sequential neural network
 what is Sequential neural network?
 "A Sequential model is appropriate for a plain stack of layers where each layer has exactly one input tensor and one output tensor."
 
-i had Comment Toxicity Model using Sequential neural network, Tensorflow, Keras and Gradio keras uand imported the Sequential api since it would be the fastest asnd easiest to create my model and imported a number keras layers:
+i had Comment Toxicity Model using Sequential neural network, Tensorflow, Keras and Gradio keras uand imported the Sequential api since it would be the fastest and easiest to create my model and imported a number keras layers:
 lstm(with 32 lstm units, with an activation of 'tanh')
 dropout 
 bidirectional 
 dense
 
-the last layer will have an activation of sigmoid to transform any outputs from the last layer into a value between 0 and 1; i'm going to be taking anything that comes out of this dense layer so that the outputs are going to be somewhere between 0 and 1 which is exactly what im expecting for the labels.
+the last layer will have an activation of sigmoid to transform any outputs from the last layer into a value between 0 and 1; i'm going to be taking anything that comes out of this dense layer so that the outputs are going to be somewhere between 0 and 1 which is exactly what im expecting for my labels.
 
-sigmoid activation image (google)
+![sigmoid activation](https://user-images.githubusercontent.com/99671158/212913515-30b0ed6b-616f-4e96-bd98-c3945958d11c.PNG)
 
 
 3.
 - Predictions
 my prediction are shown below to represent my labels.
-prediction labels image
+
+*prediction labels image*
 
 4. 
  Evaluate Model
@@ -42,7 +43,7 @@ These are the metrics caluculated below are calculated, the had only trained for
 5.Gradio and testing
 and you can see it is determining whether or not our model or whether or not that particular statement gets flagged or not and i had tested it would 2 opposing comments to detect its performace towrads them, and it seemed to work nicely, though i do believe the performance of this model could be imporoved on furter if a higher epoch should be imposed. 
 
-'i freaking hate you' image 
+*'i freaking hate you' image* 
 
 
-'i love you' image
+*'i love you' image*
